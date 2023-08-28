@@ -214,7 +214,7 @@ if __name__ == "__main__":
 
         # Use stable-diffusion to pair chromatically
         with st.spinner("Visualizing..."):
-            img = createImage(match.group(1))
+            img = createImage("Draw the outfit, not the described item." + match.group(1))
             try:
                 st.image(img.data.image.base64, output_format='auto', use_column_width=True)
 
